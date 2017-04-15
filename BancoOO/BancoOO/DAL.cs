@@ -23,14 +23,14 @@ namespace BancoOO
             //}
         }
 
-        public Conta Buscar(int id)
+        public Conta Buscar(Conta conta)
         {
             var sql = "select * from Contas where Id = @id";
             var comando = new SqlCommand(sql, conexao);
-            comando.Parameters.AddWithValue("@Id", id);
+            comando.Parameters.AddWithValue("@Id", conta.Id);
 
             SqlDataReader reader = comando.ExecuteReader();
-            Conta conta = null;
+            //conta = null;
             while (reader.Read())
             {
                 conta = new Conta();
@@ -65,21 +65,21 @@ namespace BancoOO
             return listContas;
         }
 
-        public bool Inserir(string numero, string agencia, string tipo)
+        public bool Inserir(Conta conta)
         {
             var sql = "Insert into Contas (Numero, Agencia,Tipo) " +
                          "values (@Numero ,@Agencia,@Tipo)";
             var comando = new SqlCommand(sql, conexao);
-            comando.Parameters.AddWithValue("@Numero", numero);
-            comando.Parameters.AddWithValue("@Agencia", agencia);
-            comando.Parameters.AddWithValue("@Tipo", tipo);
+            comando.Parameters.AddWithValue("@Numero", conta.Numero);
+            comando.Parameters.AddWithValue("@Agencia", conta.Agencia);
+            comando.Parameters.AddWithValue("@Tipo", conta.Tipo);
             var retorno = comando.ExecuteNonQuery();
             if (retorno > 0)
                 return true;
             else
                 return false;
         }
-        public bool Alterar(Conta conta, int id)
+        public bool Alterar(Conta conta)
         {
             var sql = "Update Contas set Agencia = @agencia, " +
                 "Numero = @numero, Tipo = @tipo WHERE Id = @id";
@@ -88,7 +88,7 @@ namespace BancoOO
             comando.Parameters.AddWithValue("@agencia", conta.Agencia);
             comando.Parameters.AddWithValue("@numero", conta.Numero);
             comando.Parameters.AddWithValue("@tipo", conta.Tipo);
-            comando.Parameters.AddWithValue("@id", id);
+            comando.Parameters.AddWithValue("@id", conta.Id);
             var retorno = comando.ExecuteNonQuery();
             if (retorno > 0)
                 return true;
