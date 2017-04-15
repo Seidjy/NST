@@ -8,3 +8,14 @@ c:\users\acer\documents\visual studio 2017\Projects\BancoOO\BancoOO\obj\Debug\Ba
 c:\users\acer\documents\visual studio 2017\Projects\BancoOO\BancoOO\obj\Debug\BancoOO.exe
 c:\users\acer\documents\visual studio 2017\Projects\BancoOO\BancoOO\obj\Debug\BancoOO.pdb
 C:\Users\Acer\documents\visual studio 2017\Projects\BancoOO\BancoOO\obj\Debug\BancoOO.Form2.resources
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\bin\Debug\BancoOO.exe.config
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\bin\Debug\BancoOO.exe
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\bin\Debug\BancoOO.pdb
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\obj\Debug\BancoOO.csprojResolveAssemblyReference.cache
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\obj\Debug\BancoOO.Properties.Resources.resources
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\obj\Debug\BancoOO.csproj.GenerateResource.Cache
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\obj\Debug\BancoOO.exe
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\obj\Debug\BancoOO.pdb
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\obj\Debug\BancoOO.TelaConsulta.resources
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\obj\Debug\BancoOO.TelaAlterar.resources
+C:\Users\Lab\Downloads\NST-master\BancoOO\BancoOO\obj\Debug\BancoOO.TelaCadastro.resources

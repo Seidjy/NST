@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace BancoOO
 {
-    public partial class Form2 : Form
+    public partial class TelaAlterar : Form
     {
         public Conta Conta { get; set; }
 
-        public Form2()
+        public TelaAlterar()
         {
             InitializeComponent();
         }
 
-        public Form2(Conta conta)
+        public TelaAlterar(Conta conta)
         {
             Conta = conta;
             InitializeComponent();
@@ -71,12 +71,8 @@ namespace BancoOO
                 conta.Tipo = "P";
             }
 
-            SqlCommand comando = new SqlCommand("UPDATE Contas SET Agencia = @agencia, Saldo = @saldo, Tipo = @tipo where Id = @id", conexao);
-            comando.Parameters.AddWithValue("@agencia", conta.Agencia);
-            comando.Parameters.AddWithValue("@saldo", conta.Saldo);
-            comando.Parameters.AddWithValue("@tipo", conta.Tipo);
-            comando.Parameters.AddWithValue("@id",  conta.Id);
-            comando.ExecuteNonQuery();
+            SqlCommand comando = new SqlCommand("UPDATE Contas SET (z", conexao);
+            SqlDataReader reader = comando.ExecuteReader();
 
             conexao.Close();
         }
