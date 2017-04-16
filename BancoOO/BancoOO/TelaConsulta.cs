@@ -30,32 +30,7 @@ namespace BancoOO
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            var stringConexao = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BD;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlConnection conexao = new SqlConnection(stringConexao);
-
-            conexao.Open();
-
-            SqlCommand comando = new SqlCommand("Select * from Contas", conexao);
-            SqlDataReader reader = comando.ExecuteReader();
-            
-            while (reader.Read())
-            {
-
-                Conta conta = new Conta();
-
-                conta.Id = Convert.ToInt32(reader["Id"]);
-                conta.Numero = Convert.ToString(reader["Numero"]);
-                conta.Agencia = Convert.ToString(reader["Agencia"]);
-                conta.Tipo = Convert.ToString(reader["Tipo"]);
-                conta.Saldo = Convert.ToDecimal(reader["Saldo"]);
-
-                Contas.Add(conta);
-
-            }
-
-            dataGridView1.DataSource = Contas;
-            conexao.Close();
-
+            this.Atualizar();
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -63,10 +38,17 @@ namespace BancoOO
             Conta linha = dataGridView1.SelectedRows[0].DataBoundItem as Conta;
             //Criar um novo form para editar e atualiza-lo no BD
 
-            TelaAlterar form2 = new TelaAlterar(linha);
+            TelaAlterar form2 = new TelaAlterar(linha, this);
             form2.Show();
             
 
+        }
+
+        public void Atualizar()
+        {
+            DAL dal = new DAL();
+
+            dataGridView1.DataSource = dal.GetAll();
         }
     }
 }

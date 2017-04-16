@@ -13,14 +13,13 @@ namespace BancoOO
 
         public DAL()
         {
-            var caminho = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=BancoContas;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //Seidjy
+            var caminho = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BD;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+
             conexao = new SqlConnection(caminho);
             conexao.Open();
 
-            //if (ConnectionState.Open == conexao.State)
-            //{
-
-            //}
         }
 
         public Conta Buscar(Conta conta)
@@ -46,7 +45,7 @@ namespace BancoOO
 
         public List<Conta> GetAll()
         {
-            var sql = "select * from Usuario";
+            var sql = "select * from Contas";
             var comando = new SqlCommand(sql, conexao);
 
             SqlDataReader reader = comando.ExecuteReader();
@@ -82,12 +81,13 @@ namespace BancoOO
         public bool Alterar(Conta conta)
         {
             var sql = "Update Contas set Agencia = @agencia, " +
-                "Numero = @numero, Tipo = @tipo WHERE Id = @id";
+                "Numero = @numero, Tipo = @tipo, Saldo = @saldo WHERE Id = @id";
 
             var comando = new SqlCommand(sql, conexao);
             comando.Parameters.AddWithValue("@agencia", conta.Agencia);
             comando.Parameters.AddWithValue("@numero", conta.Numero);
             comando.Parameters.AddWithValue("@tipo", conta.Tipo);
+            comando.Parameters.AddWithValue("@saldo", conta.Saldo);
             comando.Parameters.AddWithValue("@id", conta.Id);
             var retorno = comando.ExecuteNonQuery();
             if (retorno > 0)
