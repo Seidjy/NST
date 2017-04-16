@@ -30,3 +30,4 @@ C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.TelaCadastro.re
 C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.csproj.GenerateResource.Cache
 C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.exe
 C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.pdb
+C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.TelaPrincipal.resources

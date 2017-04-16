@@ -16,7 +16,7 @@ namespace BancoOO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaConsulta());
+            Application.Run(new TelaPrincipal());
         }
     }
 }
