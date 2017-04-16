@@ -40,7 +40,6 @@ namespace BancoOO
 
             TelaAlterar form2 = new TelaAlterar(linha, this);
             form2.Show();
-            
 
         }
 

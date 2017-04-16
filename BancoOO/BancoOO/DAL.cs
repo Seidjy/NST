@@ -78,6 +78,7 @@ namespace BancoOO
             else
                 return false;
         }
+
         public bool Alterar(Conta conta)
         {
             var sql = "Update Contas set Agencia = @agencia, " +
