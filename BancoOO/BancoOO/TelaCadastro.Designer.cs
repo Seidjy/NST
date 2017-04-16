@@ -94,6 +94,7 @@
             // rbCorrente
             // 
             this.rbCorrente.AutoSize = true;
+            this.rbCorrente.Checked = true;
             this.rbCorrente.Location = new System.Drawing.Point(67, 78);
             this.rbCorrente.Name = "rbCorrente";
             this.rbCorrente.Size = new System.Drawing.Size(65, 17);
@@ -109,7 +110,6 @@
             this.rbPoupanca.Name = "rbPoupanca";
             this.rbPoupanca.Size = new System.Drawing.Size(74, 17);
             this.rbPoupanca.TabIndex = 8;
-            this.rbPoupanca.TabStop = true;
             this.rbPoupanca.Text = "Poupança";
             this.rbPoupanca.UseVisualStyleBackColor = true;
             // 

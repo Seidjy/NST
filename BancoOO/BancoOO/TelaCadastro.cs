@@ -26,18 +26,18 @@ namespace BancoOO
         {
             DAL dal = new DAL();
             Conta conta = new Conta();
-
-            conta.Agencia = txtAgencia.Text;
-            conta.Numero = txtNumero.Text;
-
+            
             if (rbCorrente.Checked)
             {
                 conta.Tipo = "C";
             }
             else if (rbPoupanca.Checked)
             {
-                conta.Tipo = "P";
+                conta.Tipo = "P";                
             }
+
+            conta.Agencia = txtAgencia.Text;
+            conta.Numero = txtNumero.Text;
 
             dal.Inserir(conta);
         }
