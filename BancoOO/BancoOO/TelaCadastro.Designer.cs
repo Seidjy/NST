@@ -128,6 +128,7 @@
             this.Controls.Add(this.lblAgencia);
             this.Name = "TelaCadastro";
             this.Text = "TelaCadastro";
+            this.Load += new System.EventHandler(this.TelaCadastro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

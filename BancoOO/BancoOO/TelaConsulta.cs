@@ -15,6 +15,7 @@ namespace BancoOO
     {
 
         public List<Conta> Contas { get; set; }
+        DAL dal = new DAL();
 
         public TelaConsulta()
         {
@@ -29,25 +30,43 @@ namespace BancoOO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             this.Atualizar();
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Conta linha = dataGridView1.SelectedRows[0].DataBoundItem as Conta;
-            //Criar um novo form para editar e atualiza-lo no BD
-
-            TelaAlterar form2 = new TelaAlterar(linha, this);
-            form2.Show();
-
+       
+            if (rbAlterar.Checked)
+            {
+                    TelaAlterar telaAlterar = new TelaAlterar(linha, this);
+                    telaAlterar.Show();
+                }
+                else if (rbSaqueDebito.Checked)
+                {
+                    TelaSaqueDebito telaSaqueDebito = new TelaSaqueDebito(linha, this);
+                    telaSaqueDebito.Show();
+                }
+                else if (rbTransferencia.Checked)
+                {
+                    TelaTransferencia telaAlterar = new TelaTransferencia(linha, this);
+                    telaAlterar.Show();
+                }else if (rbExcluir.Checked)
+                {
+                    dal.Deletar(linha);
+                    Atualizar();
+                }
+            
         }
 
         public void Atualizar()
         {
-            DAL dal = new DAL();
-
             dataGridView1.DataSource = dal.GetAll();
+        }
+
+        private void rbExcluir_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

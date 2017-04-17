@@ -12,8 +12,18 @@ namespace BancoOO
 {
     public partial class TelaCadastro : Form
     {
+        public Conta Conta { get; set; }
+        public TelaConsulta TelaConsulta { get; set; }
+
         public TelaCadastro()
         {
+            InitializeComponent();
+        }
+
+        public TelaCadastro(Conta conta, TelaConsulta telaConsulta)
+        {
+            Conta = conta;
+            TelaConsulta = telaConsulta;
             InitializeComponent();
         }
 
@@ -40,6 +50,11 @@ namespace BancoOO
             conta.Numero = txtNumero.Text;
 
             dal.Inserir(conta);
+        }
+
+        private void TelaCadastro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

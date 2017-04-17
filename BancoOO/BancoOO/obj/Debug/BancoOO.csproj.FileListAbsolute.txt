@@ -31,3 +31,5 @@ C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.csproj.Generate
 C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.exe
 C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.pdb
 C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.TelaPrincipal.resources
+C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.TelaSaqueDebito.resources
+C:\Users\Acer\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.TelaTransferencia.resources
