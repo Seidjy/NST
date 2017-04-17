@@ -23,7 +23,7 @@ namespace BancoOO
         public TelaSaqueDebito(Conta conta, TelaConsulta telaConsulta)
         {
             Conta = conta;
-          /*  if(conta.Tipo =="C")
+            if(conta.Tipo =="C")
             {
                 Conta = new ContaCorrente();
 
@@ -33,10 +33,11 @@ namespace BancoOO
                 Conta = new ContaPoupanca();
             }
 
+            Conta.Id = conta.Id;
             Conta.Tipo = conta.Tipo;
             Conta.Saldo = conta.Saldo;
             Conta.Numero = conta.Numero;
-            Conta.Agencia = conta.Agencia; */
+            Conta.Agencia = conta.Agencia; 
 
             TelaConsulta = telaConsulta;
             InitializeComponent();

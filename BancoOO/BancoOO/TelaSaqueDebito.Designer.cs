@@ -59,6 +59,7 @@
             // rbSaque
             // 
             this.rbSaque.AutoSize = true;
+            this.rbSaque.Checked = true;
             this.rbSaque.Location = new System.Drawing.Point(105, 46);
             this.rbSaque.Name = "rbSaque";
             this.rbSaque.Size = new System.Drawing.Size(56, 17);
@@ -74,7 +75,6 @@
             this.rbDebito.Name = "rbDebito";
             this.rbDebito.Size = new System.Drawing.Size(56, 17);
             this.rbDebito.TabIndex = 5;
-            this.rbDebito.TabStop = true;
             this.rbDebito.Text = "Debito";
             this.rbDebito.UseVisualStyleBackColor = true;
             // 
