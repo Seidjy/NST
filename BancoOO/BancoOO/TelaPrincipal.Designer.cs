@@ -31,11 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transferênciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.debitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transferênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -45,7 +42,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem,
-            this.transferênciasToolStripMenuItem});
+            this.consultarToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(606, 24);
@@ -55,8 +52,7 @@
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contaToolStripMenuItem,
-            this.consultarToolStripMenuItem});
+            this.contaToolStripMenuItem});
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.cadastrarToolStripMenuItem.Text = "Contas";
@@ -64,45 +60,24 @@
             // contaToolStripMenuItem
             // 
             this.contaToolStripMenuItem.Name = "contaToolStripMenuItem";
-            this.contaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contaToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.contaToolStripMenuItem.Text = "Cadastrar";
             this.contaToolStripMenuItem.Click += new System.EventHandler(this.contaToolStripMenuItem_Click);
             // 
-            // consultarToolStripMenuItem
+            // consultarToolStripMenuItem1
             // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar";
-            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+            this.consultarToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contasToolStripMenuItem});
+            this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(70, 20);
+            this.consultarToolStripMenuItem1.Text = "Consultar";
             // 
-            // transferênciasToolStripMenuItem
+            // contasToolStripMenuItem
             // 
-            this.transferênciasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saqueToolStripMenuItem,
-            this.debitoToolStripMenuItem,
-            this.transferênciaToolStripMenuItem});
-            this.transferênciasToolStripMenuItem.Name = "transferênciasToolStripMenuItem";
-            this.transferênciasToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.transferênciasToolStripMenuItem.Text = "Transferências";
-            // 
-            // saqueToolStripMenuItem
-            // 
-            this.saqueToolStripMenuItem.Name = "saqueToolStripMenuItem";
-            this.saqueToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.saqueToolStripMenuItem.Text = "Saque";
-            // 
-            // debitoToolStripMenuItem
-            // 
-            this.debitoToolStripMenuItem.Name = "debitoToolStripMenuItem";
-            this.debitoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.debitoToolStripMenuItem.Text = "Debito";
-            // 
-            // transferênciaToolStripMenuItem
-            // 
-            this.transferênciaToolStripMenuItem.Name = "transferênciaToolStripMenuItem";
-            this.transferênciaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.transferênciaToolStripMenuItem.Text = "Transferência";
-            this.transferênciaToolStripMenuItem.Click += new System.EventHandler(this.transferênciaToolStripMenuItem_Click);
+            this.contasToolStripMenuItem.Name = "contasToolStripMenuItem";
+            this.contasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contasToolStripMenuItem.Text = "Contas";
+            this.contasToolStripMenuItem.Click += new System.EventHandler(this.contasToolStripMenuItem_Click);
             // 
             // fileSystemWatcher1
             // 
@@ -131,11 +106,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transferênciasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saqueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem debitoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transferênciaToolStripMenuItem;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem contasToolStripMenuItem;
     }
 }
