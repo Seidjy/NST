@@ -11,17 +11,19 @@ using System.Windows.Forms;
 
 namespace BancoOO
 {
-    public partial class Form2 : Form
+    public partial class TelaAlterar : Form
     {
         public Conta Conta { get; set; }
+        public TelaConsulta TelaConsulta { get; set; }
 
-        public Form2()
+        public TelaAlterar()
         {
             InitializeComponent();
         }
 
-        public Form2(Conta conta)
+        public TelaAlterar(Conta conta, TelaConsulta telaConsulta)
         {
+            TelaConsulta = telaConsulta;
             Conta = conta;
             InitializeComponent();
         }
@@ -36,7 +38,6 @@ namespace BancoOO
         {
 
             textBox1.Text = Conta.Agencia.ToString();
-            textBox3.Text = Conta.Saldo.ToString();
 
             if(Convert.ToChar(Conta.Tipo) == 'C' )
             {
@@ -51,30 +52,27 @@ namespace BancoOO
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var stringConexao = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BD;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            SqlConnection conexao = new SqlConnection(stringConexao);
+            DAL dal = new DAL();
 
-            conexao.Open();            
-
-            Conta conta = new Conta();
-
-            conta.Agencia = Convert.ToString(textBox1.Text);
-            
-            conta.Saldo = Convert.ToDecimal(textBox3.Text);
+            Conta.Agencia = Convert.ToString(textBox1.Text);
 
             if (radioButton1.Checked)
             {
-                conta.Tipo = "C";
+                Conta.Tipo = "C";
             }
             else
             {
-                conta.Tipo = "P";
+                Conta.Tipo = "P";
             }
 
-            SqlCommand comando = new SqlCommand("UPDATE Contas SET (z", conexao);
-            SqlDataReader reader = comando.ExecuteReader();
+            dal.Alterar(Conta);            
+            TelaConsulta.Atualizar();
+        }
 
-            conexao.Close();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DAL dal = new DAL();
+            dal.Deletar(Conta);
         }
     }
 }
