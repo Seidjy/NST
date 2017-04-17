@@ -12,14 +12,11 @@ using System.Windows.Forms;
 namespace BancoOO
 {
     public partial class TelaConsulta : Form
-    {
-
-        public List<Conta> Contas { get; set; }
+    {        
         DAL dal = new DAL();
 
         public TelaConsulta()
         {
-            Contas = new List<Conta>();
             InitializeComponent();
         }
 

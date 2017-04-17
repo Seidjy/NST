@@ -29,7 +29,15 @@ namespace BancoOO
 
         private void TelaTransferencia_Load(object sender, EventArgs e)
         {
+            DAL dal = new DAL();
+            comboBox1.DataSource = dal.GetAll();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+
+            TelaConsulta.Atualizar();
         }
     }
 }
