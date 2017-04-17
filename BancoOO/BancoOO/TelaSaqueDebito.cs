@@ -41,5 +41,26 @@ namespace BancoOO
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DAL dal = new DAL();
+            bool ok = false; 
+
+            if (rbDebito.Checked)
+            {
+                Conta.Debito(Convert.ToDecimal(textBox1.Text));
+                ok = true;
+            }
+            else if (rbSaque.Checked)
+            {
+                ok = Conta.Saque(Convert.ToDecimal(textBox1.Text));
+            }
+            if (ok)
+            {
+                dal.Alterar(Conta);
+                TelaConsulta.Atualizar();
+            }
+        }
     }
 }
