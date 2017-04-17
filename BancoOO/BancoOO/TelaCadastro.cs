@@ -44,6 +44,7 @@ namespace BancoOO
             dal.Inserir(conta);
             TelaConsulta telaConsulta = new TelaConsulta();
             telaConsulta.Show();
+            this.Close();
         }
 
         private void TelaCadastro_Load(object sender, EventArgs e)

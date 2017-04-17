@@ -23,7 +23,8 @@ namespace BancoOO
 
         public TelaTransferencia(Conta conta, TelaConsulta telaConsulta)
         {
-            if (conta.Tipo == "C")
+            Conta = conta;
+        /*    if (conta.Tipo == "C")
             {
                 Conta = new ContaCorrente();
 
@@ -36,10 +37,8 @@ namespace BancoOO
             Conta.Tipo = conta.Tipo;
             Conta.Saldo = conta.Saldo;
             Conta.Numero = conta.Numero;
-            Conta.Agencia = conta.Agencia;
+            Conta.Agencia = conta.Agencia;    */
 
-
-            Conta = conta;
             TelaConsulta = telaConsulta;
             InitializeComponent();
             this.Atualizar();
@@ -57,12 +56,7 @@ namespace BancoOO
         public void Atualizar()
         {
             dataGridView1.DataSource = dal.GetAll();
-        }
-       
-
-        
-
-        
+        }        
 
         private void dataGridView1_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
