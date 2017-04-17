@@ -12,6 +12,7 @@ namespace BancoOO
 {
     public partial class TelaTransferencia : Form
     {
+        DAL dal = new DAL();
         public Conta Conta { get; set; }
         public TelaConsulta TelaConsulta { get; set; }
 
@@ -22,22 +23,63 @@ namespace BancoOO
 
         public TelaTransferencia(Conta conta, TelaConsulta telaConsulta)
         {
+            if (conta.Tipo == "C")
+            {
+                Conta = new ContaCorrente();
+
+            }
+            else if (conta.Tipo == "P")
+            {
+                Conta = new ContaPoupanca();
+            }
+
+            Conta.Tipo = conta.Tipo;
+            Conta.Saldo = conta.Saldo;
+            Conta.Numero = conta.Numero;
+            Conta.Agencia = conta.Agencia;
+
+
             Conta = conta;
             TelaConsulta = telaConsulta;
             InitializeComponent();
+            this.Atualizar();
         }
 
         private void TelaTransferencia_Load(object sender, EventArgs e)
         {
             DAL dal = new DAL();
-            comboBox1.DataSource = dal.GetAll();
+
+        }
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+          //  Conta linha = dataGridView1.SelectedRows[0].DataBoundItem as Conta;
+        }
+        public void Atualizar()
+        {
+            dataGridView1.DataSource = dal.GetAll();
+        }
+       
+
+        
+
+        
+
+        private void dataGridView1_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Conta linha = dataGridView1.SelectedRows[0].DataBoundItem as Conta;
+            Conta.Saque(Convert.ToDecimal(txtValor.Text));
+            linha.Debito(Convert.ToDecimal(txtValor.Text));
+
+            dal.Alterar(Conta);
+            dal.Alterar(linha);
+            TelaConsulta.Atualizar();
+            Atualizar();
+            this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
 
-            TelaConsulta.Atualizar();
         }
     }
 }

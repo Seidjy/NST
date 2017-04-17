@@ -41,37 +41,37 @@
             // lblAgencia
             // 
             this.lblAgencia.AutoSize = true;
-            this.lblAgencia.Location = new System.Drawing.Point(12, 23);
+            this.lblAgencia.Location = new System.Drawing.Point(26, 30);
             this.lblAgencia.Name = "lblAgencia";
-            this.lblAgencia.Size = new System.Drawing.Size(46, 13);
+            this.lblAgencia.Size = new System.Drawing.Size(49, 13);
             this.lblAgencia.TabIndex = 0;
-            this.lblAgencia.Text = "Agencia";
+            this.lblAgencia.Text = "Agencia:";
             this.lblAgencia.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 51);
+            this.label2.Location = new System.Drawing.Point(28, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Numero";
+            this.label2.Text = "Numero:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 78);
+            this.label3.Location = new System.Drawing.Point(44, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Tipo";
+            this.label3.Text = "Tipo:";
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(93, 186);
+            this.btnCadastrar.Location = new System.Drawing.Point(61, 191);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(155, 36);
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -79,23 +79,23 @@
             // 
             // txtAgencia
             // 
-            this.txtAgencia.Location = new System.Drawing.Point(67, 18);
+            this.txtAgencia.Location = new System.Drawing.Point(97, 27);
             this.txtAgencia.Name = "txtAgencia";
-            this.txtAgencia.Size = new System.Drawing.Size(101, 20);
+            this.txtAgencia.Size = new System.Drawing.Size(128, 20);
             this.txtAgencia.TabIndex = 5;
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(68, 48);
+            this.txtNumero.Location = new System.Drawing.Point(97, 69);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.Size = new System.Drawing.Size(128, 20);
             this.txtNumero.TabIndex = 6;
             // 
             // rbCorrente
             // 
             this.rbCorrente.AutoSize = true;
             this.rbCorrente.Checked = true;
-            this.rbCorrente.Location = new System.Drawing.Point(67, 78);
+            this.rbCorrente.Location = new System.Drawing.Point(93, 125);
             this.rbCorrente.Name = "rbCorrente";
             this.rbCorrente.Size = new System.Drawing.Size(65, 17);
             this.rbCorrente.TabIndex = 7;
@@ -106,7 +106,7 @@
             // rbPoupanca
             // 
             this.rbPoupanca.AutoSize = true;
-            this.rbPoupanca.Location = new System.Drawing.Point(160, 78);
+            this.rbPoupanca.Location = new System.Drawing.Point(174, 125);
             this.rbPoupanca.Name = "rbPoupanca";
             this.rbPoupanca.Size = new System.Drawing.Size(74, 17);
             this.rbPoupanca.TabIndex = 8;

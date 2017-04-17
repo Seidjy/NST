@@ -22,7 +22,21 @@ namespace BancoOO
 
         public TelaSaqueDebito(Conta conta, TelaConsulta telaConsulta)
         {
-            Conta = conta;
+            if(conta.Tipo =="C")
+            {
+                Conta = new ContaCorrente();
+
+            }
+            else if (conta.Tipo == "P")
+            {
+                Conta = new ContaPoupanca();
+            }
+
+            Conta.Tipo = conta.Tipo;
+            Conta.Saldo = conta.Saldo;
+            Conta.Numero = conta.Numero;
+            Conta.Agencia= conta.Agencia;
+
             TelaConsulta = telaConsulta;
             InitializeComponent();
         }
@@ -60,6 +74,7 @@ namespace BancoOO
             {
                 dal.Alterar(Conta);
                 TelaConsulta.Atualizar();
+                this.Close();
             }
         }
     }

@@ -14,10 +14,11 @@ namespace BancoOO
         public DAL()
         {
             //Seidjy
-            var caminho = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BD;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //    var caminho = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BD;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //Tamara
+            var caminho = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Conta;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-
-            conexao = new SqlConnection(caminho);
+           conexao = new SqlConnection(caminho);
             conexao.Open();
 
         }
