@@ -33,6 +33,7 @@
             this.rbAlterar = new System.Windows.Forms.RadioButton();
             this.rbTransferencia = new System.Windows.Forms.RadioButton();
             this.rbSaqueDebito = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // rbExcluir
             // 
             this.rbExcluir.AutoSize = true;
-            this.rbExcluir.Location = new System.Drawing.Point(265, 232);
+            this.rbExcluir.Location = new System.Drawing.Point(130, 232);
             this.rbExcluir.Name = "rbExcluir";
             this.rbExcluir.Size = new System.Drawing.Size(56, 17);
             this.rbExcluir.TabIndex = 2;
@@ -70,7 +71,7 @@
             // rbTransferencia
             // 
             this.rbTransferencia.AutoSize = true;
-            this.rbTransferencia.Location = new System.Drawing.Point(265, 186);
+            this.rbTransferencia.Location = new System.Drawing.Point(130, 186);
             this.rbTransferencia.Name = "rbTransferencia";
             this.rbTransferencia.Size = new System.Drawing.Size(90, 17);
             this.rbTransferencia.TabIndex = 4;
@@ -89,11 +90,22 @@
             this.rbSaqueDebito.Text = "Saque/Débito";
             this.rbSaqueDebito.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(243, 186);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 63);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Atualizar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TelaConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.rbSaqueDebito);
             this.Controls.Add(this.rbTransferencia);
             this.Controls.Add(this.rbAlterar);
@@ -115,6 +127,7 @@
         private System.Windows.Forms.RadioButton rbAlterar;
         private System.Windows.Forms.RadioButton rbTransferencia;
         private System.Windows.Forms.RadioButton rbSaqueDebito;
+        private System.Windows.Forms.Button button1;
     }
 }
 

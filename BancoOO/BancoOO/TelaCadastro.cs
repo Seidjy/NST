@@ -12,20 +12,12 @@ namespace BancoOO
 {
     public partial class TelaCadastro : Form
     {
-        public Conta Conta { get; set; }
-        public TelaConsulta TelaConsulta { get; set; }
 
         public TelaCadastro()
         {
             InitializeComponent();
         }
-
-        public TelaCadastro(Conta conta, TelaConsulta telaConsulta)
-        {
-            Conta = conta;
-            TelaConsulta = telaConsulta;
-            InitializeComponent();
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {

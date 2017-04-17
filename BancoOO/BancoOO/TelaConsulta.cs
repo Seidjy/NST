@@ -68,5 +68,10 @@ namespace BancoOO
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Atualizar();
+        }
     }
 }
