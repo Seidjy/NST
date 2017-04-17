@@ -9,3 +9,5 @@ c:\users\acer\documents\visual studio 2017\Projects\BancoOO\BancoOO\obj\Debug\Ba
 c:\users\acer\documents\visual studio 2017\Projects\BancoOO\BancoOO\obj\Debug\BancoOO.pdb
 C:\Users\Acer\documents\visual studio 2017\Projects\BancoOO\BancoOO\obj\Debug\BancoOO.Form2.resources
 C:\Users\User\Source\Repos\NST\BancoOO\BancoOO\bin\Debug\BancoOO.exe.config
+C:\Users\User\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.exe
+C:\Users\User\Source\Repos\NST\BancoOO\BancoOO\obj\Debug\BancoOO.pdb
