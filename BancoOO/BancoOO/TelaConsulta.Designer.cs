@@ -42,7 +42,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(343, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(553, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
@@ -50,7 +50,7 @@
             // rbExcluir
             // 
             this.rbExcluir.AutoSize = true;
-            this.rbExcluir.Location = new System.Drawing.Point(130, 232);
+            this.rbExcluir.Location = new System.Drawing.Point(277, 232);
             this.rbExcluir.Name = "rbExcluir";
             this.rbExcluir.Size = new System.Drawing.Size(56, 17);
             this.rbExcluir.TabIndex = 2;
@@ -61,7 +61,7 @@
             // rbAlterar
             // 
             this.rbAlterar.AutoSize = true;
-            this.rbAlterar.Location = new System.Drawing.Point(12, 232);
+            this.rbAlterar.Location = new System.Drawing.Point(92, 232);
             this.rbAlterar.Name = "rbAlterar";
             this.rbAlterar.Size = new System.Drawing.Size(55, 17);
             this.rbAlterar.TabIndex = 3;
@@ -71,7 +71,7 @@
             // rbTransferencia
             // 
             this.rbTransferencia.AutoSize = true;
-            this.rbTransferencia.Location = new System.Drawing.Point(130, 186);
+            this.rbTransferencia.Location = new System.Drawing.Point(277, 186);
             this.rbTransferencia.Name = "rbTransferencia";
             this.rbTransferencia.Size = new System.Drawing.Size(90, 17);
             this.rbTransferencia.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             this.rbSaqueDebito.AutoSize = true;
             this.rbSaqueDebito.Checked = true;
-            this.rbSaqueDebito.Location = new System.Drawing.Point(12, 186);
+            this.rbSaqueDebito.Location = new System.Drawing.Point(92, 186);
             this.rbSaqueDebito.Name = "rbSaqueDebito";
             this.rbSaqueDebito.Size = new System.Drawing.Size(92, 17);
             this.rbSaqueDebito.TabIndex = 5;
@@ -92,7 +92,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(243, 186);
+            this.button1.Location = new System.Drawing.Point(434, 186);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 63);
             this.button1.TabIndex = 6;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 261);
+            this.ClientSize = new System.Drawing.Size(577, 261);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.rbSaqueDebito);
             this.Controls.Add(this.rbTransferencia);
@@ -112,7 +112,7 @@
             this.Controls.Add(this.rbExcluir);
             this.Controls.Add(this.dataGridView1);
             this.Name = "TelaConsulta";
-            this.Text = "Form1";
+            this.Text = "Consulta";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

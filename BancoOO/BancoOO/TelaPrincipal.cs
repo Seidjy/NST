@@ -38,5 +38,11 @@ namespace BancoOO
         {
 
         }
+
+        private void contasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaConsulta telaConsulta = new TelaConsulta();
+            telaConsulta.Show();
+        }
     }
 }

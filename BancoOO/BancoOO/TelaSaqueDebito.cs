@@ -23,38 +23,61 @@ namespace BancoOO
         public TelaSaqueDebito(Conta conta, TelaConsulta telaConsulta)
         {
             Conta = conta;
+            if(conta.Tipo =="C")
+            {
+                Conta = new ContaCorrente();
+
+            }
+            else if (conta.Tipo == "P")
+            {
+                Conta = new ContaPoupanca();
+            }
+
+            Conta.Id = conta.Id;
+            Conta.Tipo = conta.Tipo;
+            Conta.Saldo = conta.Saldo;
+            Conta.Numero = conta.Numero;
+            Conta.Agencia = conta.Agencia; 
+
             TelaConsulta = telaConsulta;
             InitializeComponent();
         }
 
-               private void TelaSaqueDebito_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnEnviar_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TelaSaqueDebito_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             DAL dal = new DAL();
-            Conta conta = new Conta();
-         
+            bool ok = false; 
+
             if (rbDebito.Checked)
             {
-               Conta.Debito (Convert.ToDecimal(txtValor.Text));
+                Conta.Debito(Convert.ToDecimal(textBox1.Text));
+                ok = true;
             }
             else if (rbSaque.Checked)
             {
-                Conta.Saque(Convert.ToDecimal(txtValor.Text));
+                ok = Conta.Saque(Convert.ToDecimal(textBox1.Text));
             }
-
-
-            dal.Alterar(conta);
-        
-    }
-
-        private void TelaSaqueDebito_Load_1(object sender, EventArgs e)
-        {
-
+            if (ok)
+            {
+                dal.Alterar(Conta);
+                TelaConsulta.Atualizar();
+                this.Close();
+            }
         }
-
-      }
+    }
 }

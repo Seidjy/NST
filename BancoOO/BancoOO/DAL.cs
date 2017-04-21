@@ -11,13 +11,13 @@ namespace BancoOO
     {
         public SqlConnection conexao { get; set; }
 
-        public DAL()
+        public DAL()//construtor inicia conexão e abre ela
         {
             //Seidjy
-            var caminho = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Contas;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        //    var caminho = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BD;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
-
+            var caminho = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BD;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            //Tamara
+            //var caminho = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Conta;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            
             conexao = new SqlConnection(caminho);
             conexao.Open();
 
@@ -26,10 +26,10 @@ namespace BancoOO
         public Conta Buscar(Conta conta)
         {
             var sql = "select * from Contas where Id = @id";
-            var comando = new SqlCommand(sql, conexao);
-            comando.Parameters.AddWithValue("@Id", conta.Id);
+            SqlCommand SqlCommand = new SqlCommand(sql, conexao);
+            SqlCommand.Parameters.AddWithValue("@Id", conta.Id);
 
-            SqlDataReader reader = comando.ExecuteReader();
+            SqlDataReader reader = SqlCommand.ExecuteReader();
             //conta = null;
             while (reader.Read())
             {
@@ -47,9 +47,9 @@ namespace BancoOO
         public List<Conta> GetAll()
         {
             var sql = "select * from Contas";
-            var comando = new SqlCommand(sql, conexao);
+            SqlCommand SqlCommand = new SqlCommand(sql, conexao);
 
-            SqlDataReader reader = comando.ExecuteReader();
+            SqlDataReader reader = SqlCommand.ExecuteReader();
             Conta conta = null;
             List<Conta> listContas = new List<Conta>();
             while (reader.Read())
@@ -70,11 +70,11 @@ namespace BancoOO
         {
             var sql = "Insert into Contas (Numero, Agencia,Tipo) " +
                          "values (@Numero ,@Agencia,@Tipo)";
-            var comando = new SqlCommand(sql, conexao);
-            comando.Parameters.AddWithValue("@Numero", conta.Numero);
-            comando.Parameters.AddWithValue("@Agencia", conta.Agencia);
-            comando.Parameters.AddWithValue("@Tipo", conta.Tipo);
-            var retorno = comando.ExecuteNonQuery();
+            SqlCommand SqlCommand = new SqlCommand(sql, conexao);
+            SqlCommand.Parameters.AddWithValue("@Numero", conta.Numero);
+            SqlCommand.Parameters.AddWithValue("@Agencia", conta.Agencia);
+            SqlCommand.Parameters.AddWithValue("@Tipo", conta.Tipo);
+            var retorno = SqlCommand.ExecuteNonQuery();
             if (retorno > 0)
                 return true;
             else
@@ -86,13 +86,31 @@ namespace BancoOO
             var sql = "Update Contas set Agencia = @agencia, " +
                 "Numero = @numero, Tipo = @tipo, Saldo = @saldo WHERE Id = @id";
 
-            var comando = new SqlCommand(sql, conexao);
-            comando.Parameters.AddWithValue("@agencia", conta.Agencia);
-            comando.Parameters.AddWithValue("@numero", conta.Numero);
-            comando.Parameters.AddWithValue("@tipo", conta.Tipo);
-            comando.Parameters.AddWithValue("@saldo", conta.Saldo);
-            comando.Parameters.AddWithValue("@id", conta.Id);
-            var retorno = comando.ExecuteNonQuery();
+            SqlCommand SqlCommand = new SqlCommand(sql, conexao);
+            SqlCommand.Parameters.AddWithValue("@agencia", conta.Agencia);
+            SqlCommand.Parameters.AddWithValue("@numero", conta.Numero);
+            SqlCommand.Parameters.AddWithValue("@tipo", conta.Tipo);
+            SqlCommand.Parameters.AddWithValue("@saldo", conta.Saldo);
+            SqlCommand.Parameters.AddWithValue("@id", conta.Id);
+            var retorno = SqlCommand.ExecuteNonQuery();
+            if (retorno > 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool Alterar(Conta conta, SqlTransaction sqlTransaction)
+        {
+            var sql = "Update Contas set Agencia = @agencia, " +
+                "Numero = @numero, Tipo = @tipo, Saldo = @saldo WHERE Id = @id";
+
+            SqlCommand SqlCommand = new SqlCommand(sql, conexao, sqlTransaction);
+            SqlCommand.Parameters.AddWithValue("@agencia", conta.Agencia);
+            SqlCommand.Parameters.AddWithValue("@numero", conta.Numero);
+            SqlCommand.Parameters.AddWithValue("@tipo", conta.Tipo);
+            SqlCommand.Parameters.AddWithValue("@saldo", conta.Saldo);
+            SqlCommand.Parameters.AddWithValue("@id", conta.Id);
+            var retorno = SqlCommand.ExecuteNonQuery();
             if (retorno > 0)
                 return true;
             else
@@ -103,9 +121,9 @@ namespace BancoOO
         {
             var sql = "Delete from Contas where Id = @id";
 
-            var comando = new SqlCommand(sql, conexao);
-            comando.Parameters.AddWithValue("@id", conta.Id);
-            var retorno = comando.ExecuteNonQuery();
+            SqlCommand SqlCommand = new SqlCommand(sql, conexao);
+            SqlCommand.Parameters.AddWithValue("@id", conta.Id);
+            var retorno = SqlCommand.ExecuteNonQuery();
             if (retorno > 0)
                 return true;
             else

@@ -67,6 +67,7 @@ namespace BancoOO
 
             dal.Alterar(Conta);            
             TelaConsulta.Atualizar();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

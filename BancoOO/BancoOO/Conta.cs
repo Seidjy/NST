@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BancoOO
+﻿namespace BancoOO
 {
     public class Conta
     {
@@ -12,25 +10,17 @@ namespace BancoOO
 
         public virtual bool Saque(decimal valor)
         {
-            if (Saldo < valor)
+            if(valor > Saldo)
             {
-                if (valor < 1000)
-                {
-                    Saldo -= (valor + 0.10m);
-                    return true;
-                }
-            }            
-            return false;
+                return false;
+            }
+            Saldo -= valor;
+            return true;
         }
 
-        public void Credito(decimal valor)
+        public void Debito(decimal valor)
         {
             Saldo += valor;
-        }
-
-        internal void Debito(decimal v)
-        {
-            throw new NotImplementedException();
         }
     }
 }

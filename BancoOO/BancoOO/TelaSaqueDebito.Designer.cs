@@ -28,113 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEnviarr = new System.Windows.Forms.Button();
-            this.lblSaldoo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtValorr = new System.Windows.Forms.TextBox();
-            this.lblValorr = new System.Windows.Forms.Label();
-            this.rbDebitoo = new System.Windows.Forms.RadioButton();
-            this.rbSaquee = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.rbSaque = new System.Windows.Forms.RadioButton();
+            this.rbDebito = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnEnviarr
-            // 
-            this.btnEnviarr.Location = new System.Drawing.Point(85, 192);
-            this.btnEnviarr.Name = "btnEnviarr";
-            this.btnEnviarr.Size = new System.Drawing.Size(75, 23);
-            this.btnEnviarr.TabIndex = 0;
-            this.btnEnviarr.Text = "Enviar";
-            this.btnEnviarr.UseVisualStyleBackColor = true;
-            this.btnEnviarr.Click += new System.EventHandler(this.btnEnviarr_Click);
-            // 
-            // lblSaldoo
-            // 
-            this.lblSaldoo.AutoSize = true;
-            this.lblSaldoo.Location = new System.Drawing.Point(44, 129);
-            this.lblSaldoo.Name = "lblSaldoo";
-            this.lblSaldoo.Size = new System.Drawing.Size(37, 13);
-            this.lblSaldoo.TabIndex = 1;
-            this.lblSaldoo.Text = "Saldo:";
-            this.lblSaldoo.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(108, 129);
+            this.label2.Location = new System.Drawing.Point(50, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Valor:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtValorr
+            // button1
             // 
-            this.txtValorr.Location = new System.Drawing.Point(85, 79);
-            this.txtValorr.Name = "txtValorr";
-            this.txtValorr.Size = new System.Drawing.Size(100, 20);
-            this.txtValorr.TabIndex = 3;
+            this.button1.Location = new System.Drawing.Point(53, 180);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(205, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Enviar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblValorr
+            // rbSaque
             // 
-            this.lblValorr.AutoSize = true;
-            this.lblValorr.Location = new System.Drawing.Point(45, 82);
-            this.lblValorr.Name = "lblValorr";
-            this.lblValorr.Size = new System.Drawing.Size(34, 13);
-            this.lblValorr.TabIndex = 4;
-            this.lblValorr.Text = "Valor:";
+            this.rbSaque.AutoSize = true;
+            this.rbSaque.Checked = true;
+            this.rbSaque.Location = new System.Drawing.Point(105, 46);
+            this.rbSaque.Name = "rbSaque";
+            this.rbSaque.Size = new System.Drawing.Size(56, 17);
+            this.rbSaque.TabIndex = 4;
+            this.rbSaque.TabStop = true;
+            this.rbSaque.Text = "Saque";
+            this.rbSaque.UseVisualStyleBackColor = true;
             // 
-            // rbDebitoo
+            // rbDebito
             // 
-            this.rbDebitoo.AutoSize = true;
-            this.rbDebitoo.Location = new System.Drawing.Point(48, 33);
-            this.rbDebitoo.Name = "rbDebitoo";
-            this.rbDebitoo.Size = new System.Drawing.Size(56, 17);
-            this.rbDebitoo.TabIndex = 5;
-            this.rbDebitoo.TabStop = true;
-            this.rbDebitoo.Text = "Debito";
-            this.rbDebitoo.UseVisualStyleBackColor = true;
+            this.rbDebito.AutoSize = true;
+            this.rbDebito.Location = new System.Drawing.Point(202, 46);
+            this.rbDebito.Name = "rbDebito";
+            this.rbDebito.Size = new System.Drawing.Size(56, 17);
+            this.rbDebito.TabIndex = 5;
+            this.rbDebito.Text = "Debito";
+            this.rbDebito.UseVisualStyleBackColor = true;
             // 
-            // rbSaquee
+            // textBox1
             // 
-            this.rbSaquee.AutoSize = true;
-            this.rbSaquee.Location = new System.Drawing.Point(170, 33);
-            this.rbSaquee.Name = "rbSaquee";
-            this.rbSaquee.Size = new System.Drawing.Size(56, 17);
-            this.rbSaquee.TabIndex = 6;
-            this.rbSaquee.TabStop = true;
-            this.rbSaquee.Text = "Saque";
-            this.rbSaquee.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(90, 112);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(144, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Tipo:";
             // 
             // TelaSaqueDebito
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.rbSaquee);
-            this.Controls.Add(this.rbDebitoo);
-            this.Controls.Add(this.lblValorr);
-            this.Controls.Add(this.txtValorr);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(303, 266);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.rbDebito);
+            this.Controls.Add(this.rbSaque);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblSaldoo);
-            this.Controls.Add(this.btnEnviarr);
             this.Name = "TelaSaqueDebito";
-            this.Load += new System.EventHandler(this.TelaSaqueDebito_Load_1);
+            this.Text = "TelaSaqueDebito";
+            this.Load += new System.EventHandler(this.TelaSaqueDebito_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblValor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton rbSaque;
         private System.Windows.Forms.RadioButton rbDebito;
-        private System.Windows.Forms.TextBox txtValor;
-        private System.Windows.Forms.Button btnEnviar;
-        private System.Windows.Forms.Label lblSaldo;
-        private System.Windows.Forms.Label lblMostraSaldo;
-        private System.Windows.Forms.Button btnEnviarr;
-        private System.Windows.Forms.Label lblSaldoo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtValorr;
-        private System.Windows.Forms.Label lblValorr;
-        private System.Windows.Forms.RadioButton rbDebitoo;
-        private System.Windows.Forms.RadioButton rbSaquee;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
