@@ -90,6 +90,18 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaSaqueDebito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaSaqueDebito.Designer.cs">
+      <DependentUpon>TelaSaqueDebito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaTransferencia.Designer.cs">
+      <DependentUpon>TelaTransferencia.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="TelaConsulta.resx">
       <DependentUpon>TelaConsulta.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaSaqueDebito.resx">
+      <DependentUpon>TelaSaqueDebito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaTransferencia.resx">
+      <DependentUpon>TelaTransferencia.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

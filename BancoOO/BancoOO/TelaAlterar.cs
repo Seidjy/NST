@@ -16,9 +16,8 @@ namespace BancoOO
         public Conta Conta { get; set; }
         public TelaConsulta TelaConsulta { get; set; }
 
-        public TelaAlterar(TelaConsulta telaConsulta)
+        public TelaAlterar()
         {
-            TelaConsulta = telaConsulta;
             InitializeComponent();
         }
 

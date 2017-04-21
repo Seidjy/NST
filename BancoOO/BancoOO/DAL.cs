@@ -62,6 +62,7 @@ namespace BancoOO
                 conta.Tipo = reader["Tipo"].ToString();
                 listContas.Add(conta);
             }
+            reader.Close();
             return listContas;
         }
 

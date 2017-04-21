@@ -12,10 +12,12 @@ namespace BancoOO
 {
     public partial class TelaCadastro : Form
     {
+
         public TelaCadastro()
         {
             InitializeComponent();
         }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -40,6 +42,11 @@ namespace BancoOO
             conta.Numero = txtNumero.Text;
 
             dal.Inserir(conta);
+        }
+
+        private void TelaCadastro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
