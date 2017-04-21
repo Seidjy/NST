@@ -106,3 +106,17 @@ F:\BancoOO\BancoOO\obj\Debug\BancoOO.TelaPrincipal.resources
 F:\BancoOO\BancoOO\obj\Debug\BancoOO.TelaSaqueCredito.resources
 F:\BancoOO\BancoOO\obj\Debug\BancoOO.TelaTransferencia.resources
 F:\BancoOO\BancoOO\obj\Debug\BancoOO.csproj.GenerateResource.Cache
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\bin\Debug\BancoOO.exe.config
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.exe
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.pdb
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\bin\Debug\BancoOO.exe
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\bin\Debug\BancoOO.pdb
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.csprojResolveAssemblyReference.cache
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.TelaConsulta.resources
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.TelaAlterar.resources
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.Properties.Resources.resources
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.TelaCadastro.resources
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.TelaPrincipal.resources
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.TelaSaqueCredito.resources
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.TelaTransferencia.resources
+C:\Users\Tamara\Source\Repos\NST6\BancoOO\BancoOO\obj\Debug\BancoOO.csproj.GenerateResource.Cache
