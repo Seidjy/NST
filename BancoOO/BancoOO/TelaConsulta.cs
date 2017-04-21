@@ -20,11 +20,6 @@ namespace BancoOO
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Atualizar();
@@ -33,7 +28,7 @@ namespace BancoOO
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Conta linha = dataGridView1.SelectedRows[0].DataBoundItem as Conta;
-       
+            
             if (rbAlterar.Checked)
             {
                     TelaAlterar telaAlterar = new TelaAlterar(linha, this);
@@ -41,7 +36,7 @@ namespace BancoOO
                 }
                 else if (rbSaqueDebito.Checked)
                 {
-                    TelaSaqueDebito telaSaqueDebito = new TelaSaqueDebito(linha, this);
+                    TelaSaqueCredito telaSaqueDebito = new TelaSaqueCredito(linha, this);
                     telaSaqueDebito.Show();
                 }
                 else if (rbTransferencia.Checked)
@@ -65,10 +60,6 @@ namespace BancoOO
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Atualizar();
-        }
+        
     }
 }

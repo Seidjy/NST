@@ -41,11 +41,11 @@ namespace BancoOO
 
             if(Convert.ToChar(Conta.Tipo) == 'C' )
             {
-                radioButton1.Select();
+                radioButton2.Select();
             }
             else
             {
-                radioButton2.Select();
+                radioButton1.Select();
             }
 
         }
@@ -58,22 +58,16 @@ namespace BancoOO
 
             if (radioButton1.Checked)
             {
-                Conta.Tipo = "C";
+                Conta.Tipo = "P";
             }
             else
             {
-                Conta.Tipo = "P";
+                Conta.Tipo = "C";
             }
 
             dal.Alterar(Conta);            
             TelaConsulta.Atualizar();
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DAL dal = new DAL();
-            dal.Deletar(Conta);
+            Close();
         }
     }
 }

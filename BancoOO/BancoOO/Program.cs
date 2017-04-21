@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+    /*
+     * Nathália Adriele de Lima - 547621
+     * Samuel Seidjy Padovan - 548596
+     * Tamara da Silva Zoner - 438367 
+     */
 namespace BancoOO
 {
     static class Program
     {
-        /// <summary>
+
         /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
+   
         [STAThread]
         static void Main()
         {

@@ -22,6 +22,11 @@ namespace BancoOO
             InitializeComponent();
         }
 
+        /* Construtor recebendo a conta e a tela de consulta
+         * irá instânciar Conta de acordo com o tipo da conta recebida
+         * após atribuirá os valores da conta recebida para a Conta
+         * TelaConsulta será utilizada para atualizar a tela de consulta após o fim das ações
+         */
         public TelaTransferencia(Conta conta, TelaConsulta telaConsulta)
         {
             Conta = conta;
@@ -58,38 +63,49 @@ namespace BancoOO
         public void Atualizar()
         {
             dataGridView1.DataSource = dal.GetAll();
-        }        
+        }
 
         private void dataGridView1_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
-        {            
-            Conta linha = dataGridView1.SelectedRows[0].DataBoundItem as Conta;
-
-            Conta.Saque(Convert.ToDecimal(txtValor.Text));
-            linha.Debito(Convert.ToDecimal(txtValor.Text));
-
-            if (Conta.Id != linha.Id)//if para evitar a transação entre mesma conta
-            {
-                SqlTransaction sqlTransaction = dal.conexao.BeginTransaction();
-                try
-                {
-                    dal.Alterar(Conta, sqlTransaction);
-                    dal.Alterar(linha, sqlTransaction);
-                    sqlTransaction.Commit();
-                }
-                catch (Exception)
-                {
-                    sqlTransaction.Rollback();
-                }
-
-                TelaConsulta.Atualizar();
-                Atualizar();
-                Close();
-            }            
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+                Conta linha = dataGridView1.SelectedRows[0].DataBoundItem as Conta;
+                bool ok;
+
+
+                if (txtValor.Text.Equals(""))//if para não permitir valor nulo
+                {
+                    label3.Text = "Coloque valor para a transferência!";
+                }
+                else
+                {
+                    if (Conta.Saque(Convert.ToDecimal(txtValor.Text)))
+                    {
+                        linha.Credito(Convert.ToDecimal(txtValor.Text));
+                        if (Conta.Id != linha.Id)//if para evitar a transação entre mesma conta
+                        {
+                            dal.Transacao(Conta, linha);
+                            ok = true;
+                        }
+                        else
+                        {
+                            label3.Text = "Não permitido transferir para mesma conta!";
+                            ok = false;
+                        }
+                    }
+                    else
+                    {
+                        label3.Text = "Saldo Insuficiente, lembre-se que o saque retira a taxa mais o valor!";
+                        ok = false;
+                    }//Conta recebe a conta do datagrid da Tela Consulta
+                     //linha recebe a conta do datagrid desta tela(TelaTransferencia)
+                    if (ok)
+                    {
+                        TelaConsulta.Atualizar();
+                        Atualizar();
+                        Close();
+                    }
+                }
 
         }
+
     }
 }

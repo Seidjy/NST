@@ -36,6 +36,7 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.rbCorrente = new System.Windows.Forms.RadioButton();
             this.rbPoupanca = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAgencia
@@ -113,11 +114,20 @@
             this.rbPoupanca.Text = "Poupança";
             this.rbPoupanca.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 165);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 9;
+            // 
             // TelaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.rbPoupanca);
             this.Controls.Add(this.rbCorrente);
             this.Controls.Add(this.txtNumero);
@@ -128,7 +138,6 @@
             this.Controls.Add(this.lblAgencia);
             this.Name = "TelaCadastro";
             this.Text = "TelaCadastro";
-            this.Load += new System.EventHandler(this.TelaCadastro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +153,6 @@
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.RadioButton rbCorrente;
         private System.Windows.Forms.RadioButton rbPoupanca;
+        private System.Windows.Forms.Label label1;
     }
 }
