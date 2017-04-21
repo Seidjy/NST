@@ -1,4 +1,6 @@
-﻿namespace BancoOO
+﻿using System;
+
+namespace BancoOO
 {
     public class Conta
     {
@@ -26,7 +28,9 @@
             Saldo += valor;
         }
 
-
-
+        internal void Debito(decimal v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

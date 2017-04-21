@@ -27,19 +27,34 @@ namespace BancoOO
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+               private void TelaSaqueDebito_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnEnviar_Click(object sender, EventArgs e)
         {
+            DAL dal = new DAL();
+            Conta conta = new Conta();
+         
+            if (rbDebito.Checked)
+            {
+               Conta.Debito (Convert.ToDecimal(txtValor.Text));
+            }
+            else if (rbSaque.Checked)
+            {
+                Conta.Saque(Convert.ToDecimal(txtValor.Text));
+            }
 
-        }
 
-        private void TelaSaqueDebito_Load(object sender, EventArgs e)
-        {
-
-        }
+            dal.Alterar(conta);
+        
     }
+
+        private void TelaSaqueDebito_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+      }
 }
